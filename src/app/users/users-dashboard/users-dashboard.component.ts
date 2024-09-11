@@ -24,7 +24,6 @@ export class UsersDashboardComponent {
     this.loadUsers();
   }
 
-  // Cargar usuarios combinados (API + localStorage)
   loadUsers(): void {
     this._service.getAllUsers().subscribe(
       response => this.users_list = response
@@ -37,6 +36,6 @@ export class UsersDashboardComponent {
 
   eventoRecibido(message: string): void {
     this.message = message;
-    this.loadUsers(); // Recargar los usuarios después de añadir uno nuevo
+    this.loadUsers(); 
   }
 }
