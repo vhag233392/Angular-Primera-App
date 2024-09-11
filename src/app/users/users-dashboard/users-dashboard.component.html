@@ -1,7 +1,7 @@
-<h1>{{message}}</h1>
 
-<div id="table_users">
-    <table border="1px black">
+
+<div class="flex items-center justify-center h-screen" id="table_users">
+    <table class="bg-gray-600 text-white">
         <tr id="table_headers">            
             <th>ID</th>
             <th>NAME</th>
@@ -9,13 +9,13 @@
             <th>PHONE</th>
             <th>WEBSITE</th>
         </tr>
-        <tr *ngFor="let user of users_list">
+        <tr class="bg-yellow-100 text-black" *ngFor="let user of users_list">
             <td>{{user.id}}</td>
             <td>{{user.name}}</td>
             <td>{{user.username}}</td>
             <td>{{user.phone}}</td>
             <td>{{user.website}}</td>
-            <td><button (click)="seleccionar_usuario(user)">Seleccionar</button></td>
+            <td><button class="bg-black text-blue-500 font-semibold rounded-md px-1 hover:bg-white" (click)="seleccionar_usuario(user)">Seleccionar</button></td>
         </tr>
     </table>
 </div>
